@@ -5,7 +5,7 @@ import plotly.express as px
 # Configuração da página
 st.set_page_config(
     page_title="Evolução da Temperatura Global", layout="centered")
-st.title("🌍 Evolução das Anomalias de Temperatura (1850 - 2024)")
+st.title("Evolução das Anomalias de Temperatura (1850 - 2024)")
 
 # Carregar os dados
 df = pd.read_csv("berkeley_temperature_cleaned.csv")
@@ -75,8 +75,9 @@ fig_line.add_scatter(
     fillcolor='rgba(0,100,200,0.2)',
     name="Faixa de Incerteza"
 )
-
-st.plotly_chart(fig_line, use_container_width=True)
+st.write('A temperatura média global está subindo — mas quanto, onde e com que consequências?
+Apesar de sabermos que o planeta está esquentando, muitas pessoas ainda não têm a real dimensão do problema ou não sabem como esse aumento se comporta ao longo do tempo e em diferentes regiões. Como conversar com as pessoas sobre o tema?')
+#st.plotly_chart(fig_line, use_container_width=True)
 
 # =============================
 # GRÁFICO DE DISPERSÃO POR ANO
@@ -110,7 +111,7 @@ st.plotly_chart(fig_hist, use_container_width=True)
 # CONCLUSÃO INTERPRETATIVA
 # ============================
 st.markdown("""
-### 🔍 Conclusão
+### Conclusão
 Os gráficos acima mostram:
 - Uma tendência clara de **aumento das anomalias** de temperatura desde o século XX;
 - **Faixas de incerteza** que se mantêm relativamente estáveis ao longo do tempo;
