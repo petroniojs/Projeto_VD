@@ -44,40 +44,11 @@ df_filtered["Date"] = pd.to_datetime(df_filtered["Year"].astype(
     str) + '-' + df_filtered["Month"].astype(str), errors='coerce')
 df_filtered = df_filtered.dropna(subset=[col_anomalia])
 
-# ============================
-# GRÁFICO PRINCIPAL DE LINHA
-# ============================
-#st.subheader(f"Gráfico de Linha: Anomalia de Temperatura ({tipo_media})")
-
-fig_line = px.line(
-    df_filtered,
-    x="Date",
-    y=col_anomalia,
-    labels={"Date": "Ano", col_anomalia: "Anomalia (°C)"},
-    title=f"Evolução da Anomalia de Temperatura ({tipo_media})"
-)
-
-# Adicionando limites de incerteza como pontos transparentes
-fig_line.add_scatter(
-    x=df_filtered["Date"],
-    y=df_filtered[col_anomalia] + df_filtered[col_incerteza],
-    mode="lines",
-    line=dict(width=0),
-    fill=None,
-    name="Limite Superior"
-)
-fig_line.add_scatter(
-    x=df_filtered["Date"],
-    y=df_filtered[col_anomalia] - df_filtered[col_incerteza],
-    mode="lines",
-    line=dict(width=0),
-    fill='tonexty',
-    fillcolor='rgba(0,100,200,0.2)',
-    name="Faixa de Incerteza"
-)
 st.subheader(f"A temperatura média global está subindo — mas quanto, onde e com que consequências? ({tipo_media})")
 st.write("Apesar de sabermos que o planeta está esquentando, muitas pessoas ainda não têm a real dimensão do problema ou não sabem como esse aumento se comporta ao longo do tempo e em diferentes regiões. Como conversar com as pessoas sobre o tema?")
-#st.plotly_chart(fig_line, use_container_width=True)
+
+st.image('https://www1.folha.uol.com.br/ambiente/2025/05/parcela-de-brasileiros-que-nega-risco-das-mudancas-climaticas-cresce-para-9-mostra-datafolha.shtml')
+
 
 # =============================
 # GRÁFICO DE DISPERSÃO POR ANO
