@@ -49,7 +49,7 @@ st.write("Apesar de sabermos que o planeta está esquentando, muitas pessoas ain
 
 
 st.image('datafolha.png', caption='Notícia Datafolha divulgada em 01/05/2025 sobre pesquisa realizada de 08 a 11 de abril de 2025')
-st.write('Clique'), st.page_link('https://www1.folha.uol.com.br/ambiente/2025/05/parcela-de-brasileiros-que-nega-risco-das-mudancas-climaticas-cresce-para-9-mostra-datafolha.shtml', label="aqui"), st.write('para ver a notícia completa')
+st.write('Clique no link abaixo para ver a notícia completa'), st.page_link('https://www1.folha.uol.com.br/ambiente/2025/05/parcela-de-brasileiros-que-nega-risco-das-mudancas-climaticas-cresce-para-9-mostra-datafolha.shtml', label="Link Datafolha")
 
 # =============================
 # GRÁFICO DE DISPERSÃO POR ANO
