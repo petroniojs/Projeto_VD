@@ -53,7 +53,10 @@ st.page_link('https://www1.folha.uol.com.br/ambiente/2025/05/parcela-de-brasilei
 # =============================
 # GRÁFICO DE DISPERSÃO POR ANO
 # =============================
-st.subheader("Dispersão de Anomalias por Ano")
+st.subheader("Oscilação Climática Média do Planeta ao Longo do Tempo")
+
+st.write('O gráfico mostra o quanto a terra estava mais quente ou mais fria em relação à média histórica naquele mês, ano ou período de média móvel.')
+
 fig_scatter = px.scatter(
     df_filtered,
     x="Year",
