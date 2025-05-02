@@ -1,6 +1,6 @@
 numpy
 pandas
-plotly.express
+plotly
 matplotlib
 seaborn
 sklearn
