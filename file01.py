@@ -47,7 +47,7 @@ df_filtered = df_filtered.dropna(subset=[col_anomalia])
 st.subheader(f"A temperatura média global está subindo — mas quanto, onde e com que consequências? ({tipo_media})")
 st.write("Apesar de sabermos que o planeta está esquentando, muitas pessoas ainda não têm a real dimensão do problema ou não sabem como esse aumento se comporta ao longo do tempo e em diferentes regiões. Como conversar com as pessoas sobre o tema?")
 
-st.image('https://www1.folha.uol.com.br/ambiente/2025/05/parcela-de-brasileiros-que-nega-risco-das-mudancas-climaticas-cresce-para-9-mostra-datafolha.shtml')
+st.page_link('https://www1.folha.uol.com.br/ambiente/2025/05/parcela-de-brasileiros-que-nega-risco-das-mudancas-climaticas-cresce-para-9-mostra-datafolha.shtml')
 st.image('datafolha.png', caption='Notícia Datafolha divulgada em 01/05/2025 sobre pesquisa realizada de 08 a 11 de abril de 2025')
 
 # =============================
