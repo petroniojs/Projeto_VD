@@ -50,9 +50,9 @@ st.image('datafolha.png', caption='Notícia Datafolha divulgada em 01/05/2025 so
 st.write('Clique no link abaixo para ver a notícia completa')
 st.page_link('https://www1.folha.uol.com.br/ambiente/2025/05/parcela-de-brasileiros-que-nega-risco-das-mudancas-climaticas-cresce-para-9-mostra-datafolha.shtml', label="Link Datafolha")
 
-# =============================
-# GRÁFICO DE DISPERSÃO POR ANO
-# =============================
+# =========================================
+# SÉRIE HISTÓRICA DAS OSCILAÇÕES CLIMÁTICAS
+# =========================================
 st.subheader("Oscilação Climática Média do Planeta ao Longo do Tempo")
 
 st.write('O gráfico mostra o quanto a terra estava mais quente ou mais fria em relação à média histórica naquele mês, ano ou período de média móvel.')
@@ -64,7 +64,7 @@ fig_scatter = px.scatter(
     color=col_anomalia,
     color_continuous_scale="RdBu_r",
     labels={"Year": "Ano", col_anomalia: "Anomalia (°C)"},
-    title="Variação das Anomalias Ano a Ano"
+    title="Oscilação Climática Média"
 )
 st.plotly_chart(fig_scatter, use_container_width=True)
 
